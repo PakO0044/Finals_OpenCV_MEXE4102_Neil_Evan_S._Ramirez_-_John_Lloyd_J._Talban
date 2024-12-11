@@ -1,4 +1,4 @@
-**# Introduction**
+# **Introduction**
 ## Shapes That Fit: Geometric Foundations of Tessellation Description
 * **Understanding Tessellation in Computer Vision:** Tessellation involves tiling a plane with one or more geometric shapes without overlaps or gaps. In computer vision, this problem extends to identifying, analyzing, and generating patterns in images or data.
 * **Complexity:** Geometric tessellation demands efficient algorithms to detect, classify, and recreate intricate tiling patterns, especially when working with irregular or distorted shapes.
