@@ -293,43 +293,49 @@ Summarize your project's objective, approach, and expected results.
 
 12. # Highlighting Detected Faces
 * Apply the Haar cascade face detection code to identify and highlight multiple faces in family or crowd photos.
+``` python
+!git clone https://github.com/PakO0044/Finals_OpenCV_MEXE4102_Neil_Evan_S._Ramirez_-_John_Lloyd_J._Talban.git
+!pip install face_recognition
+%cd Finals_OpenCV_MEXE4102_Neil_Evan_S._Ramirez_-_John_Lloyd_J._Talban
+```
+```python
+import face_recognition
+import numpy as np
+from google.colab.patches import cv2_imshow
+import cv2
+
+# Creating the encoding profiles
+face_1 = face_recognition.load_image_file("face/gelo.jpg")
+face_1_encoding = face_recognition.face_encodings(face_1)[0]
+
+face_2 = face_recognition.load_image_file("face/xavier.jpg")
+face_2_encoding = face_recognition.face_encodings(face_2)[0]
+
+face_3 = face_recognition.load_image_file("face/neil.jpg")
+face_3_encoding = face_recognition.face_encodings(face_3)[0]
+
+known_face_encodings = [
+                        face_1_encoding,
+                        face_2_encoding,
+                        face_3_encoding
+]
+
+known_face_names = [
+                    "Angelo",
+                    "Xavier",
+                    "Da Neil Ramirez"
+]
+```
   ```python
-  import face_recognition
-  import numpy as np
-  from google.colab.patches import cv2_imshow
-  import cv2
 
-  # Creating the encoding profiles
-  face_1 = face_recognition.load_image_file("face/gelo.jpg")
-  face_1_encoding = face_recognition.face_encodings(face_1)[0]
+file_name = "face/neil 2.jpg"
+unknown_image = face_recognition.load_image_file(file_name)
+unknown_image_to_draw = cv2.imread(file_name)
 
-  face_2 = face_recognition.load_image_file("face/xavier.jpg")
-  face_2_encoding = face_recognition.face_encodings(face_2)[0]
+face_locations = face_recognition.face_locations(unknown_image)
+face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
 
-  face_3 = face_recognition.load_image_file("face/neil.jpg")
-  face_3_encoding = face_recognition.face_encodings(face_3)[0]
-
-  known_face_encodings = [
-                          face_1_encoding,
-                          face_2_encoding,
-                          face_3_encoding
-  ]
-
-  known_face_names = [
-                      "Angelo",
-                      "Xavier",
-                      "Neil"
-  ]
-  ```
-  ```python
-  file_name = "face/neil.jpg"
-  unknown_image = face_recognition.load_image_file(file_name)
-  unknown_image_to_draw = cv2.imread(file_name)
-
-  face_locations = face_recognition.face_locations(unknown_image)
-  face_encodings = face_recognition.face_encodings(unknown_image, face_locations)
-
-  for (top,right, bottom, left), face_encoding in zip(face_locations, face_encodings):
+for (top,right, bottom, left), face_encoding in zip(face_locations, face_encodings):
   matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
 
   name = "Unknown"
@@ -341,7 +347,8 @@ Summarize your project's objective, approach, and expected results.
   cv2.rectangle(unknown_image_to_draw, (left, top), (right, bottom),(0,255,0),3)
   cv2.putText(unknown_image_to_draw,name, (left, top-20), cv2.FONT_HERSHEY_SIMPLEX,1,(0,0,255),2, cv2.LINE_AA)
 
-  cv2_imshow(unknown_image_to_draw)
+cv2_imshow(unknown_image_to_draw)
+
   ```
   ![image](https://github.com/user-attachments/assets/1a8af874-394e-4039-98d2-8823f374e88e)
 
