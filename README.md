@@ -19,13 +19,16 @@ Summarize your project's objective, approach, and expected results.
 * Summarize your findings, challenges, and outcomes.
 # Additional Materials
 * 16 Basic OpenCV projects
-   ```python
+
+  ```python
    !git clone https://github.com/PakO0044/Finals_OpenCV_MEXE4102_Neil_Evan_S._Ramirez_-_John_Lloyd_J._Talban.git
    %cd Finals_OpenCV_MEXE4102_Neil_Evan_S._Ramirez_-_John_Lloyd_J._Talban
    from IPython.display import clear_output
    clear_output()
    ```
-   ```python
+1. Converting Images to Grayscale
+- Use the color space conversion code to convert RGB images to grayscale for basic image preprocessing.
+  ```python
    import cv2
    from google.colab.patches import cv2_imshow
 
@@ -40,7 +43,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/c5e338e9-f31c-4cf5-b35f-d5010f3396a2)
 
-   ```python
+2. Visualizing Edge Detection
+- Apply the edge detection code to detect and visualize edges in a collection of object images.
+  ```python
    import cv2
    from google.colab.patches import cv2_imshow
    import numpy as np
@@ -54,7 +59,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/1e42cb03-53ce-4ba0-b9e1-598e53afb8f1)
 
-   ```python
+3. Demonstrating Morphological Erosion
+- Use the erosion code to show how an image's features shrink under different kernel sizes.
+  ```python
    import cv2
    from google.colab.patches import cv2_imshow
    import numpy as np
@@ -70,7 +77,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/5cc1bc6a-a4b2-4a8f-9d40-592fcbdebc15)
 
-   ```python
+4. Demonstrating Morphological Dilation
+- Apply the dilation code to illustrate how small gaps in features are filled.
+  ```python
    import cv2
    from google.colab.patches import cv2_imshow
    import numpy as np
@@ -85,7 +94,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/fc2d5d17-14c4-4530-9f44-700fe3079b1d)
 
-   ```python
+5. Reducing Noise in Photos
+- Use the denoising code to clean noisy images and compare the before-and-after effects.
+  ```python
    import cv2
    from google.colab.patches import cv2_imshow
    import numpy as np
@@ -99,7 +110,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/00dd7ffb-5de1-40f1-af64-94763bdbbeee)
 
-   ```python
+6. Drawing Geometric Shapes on Images
+- Apply the shape-drawing code to overlay circles, rectangles, and lines on sample photos.
+  ```python
    import cv2
    import numpy as np
    from google.colab.patches import cv2_imshow
@@ -117,7 +130,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/d9f2b9c5-ae95-4098-986a-ae7b8a35946a)
 
-   ```python
+7. Adding Text to Images
+- Use the text overlay code to label images with captions, annotations, or titles.
+  ```python
    import cv2
    import numpy as np
    from google.colab.patches import cv2_imshow
@@ -128,7 +143,9 @@ Summarize your project's objective, approach, and expected results.
    ```
    ![image](https://github.com/user-attachments/assets/0b9fb70c-0401-41f2-bb03-91809b764aeb)
 
-   ```python
+8. Isolating Objects by Color
+- Apply the HSV thresholding code to extract and display objects of specific colors from an image.
+  ```python
    import cv2
    import numpy as np
    from google.colab.patches import cv2_imshow
@@ -160,6 +177,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/2729a579-d760-4c0a-8924-e563baa43a52)
 
+9. Detecting Faces in Group Photos
+- Use the face detection code to identify and highlight faces in group pictures.
   ```python
   import cv2
   from google.colab.patches import cv2_imshow
@@ -179,6 +198,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/80409656-e6bf-412b-97f9-d314964aee94)
 
+10. # Outlining Shapes with Contours
+* Apply the contour detection code to outline and highlight shapes in simple object images.
   ```python
   import cv2
   import numpy as np
@@ -213,7 +234,9 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/ab8329f4-783d-40fb-8043-cd8e78e1ddf2)
 
-  ```python
+11. # Tracking a Ball in a Video
+* Use the HSV-based object detection code to track a colored ball in a recorded video.
+   ```python
   import cv2
   import numpy as np
   from google.colab.patches import cv2_imshow
@@ -268,6 +291,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/8d6f0b6d-5390-4d43-9dbd-4fe17e6d4526)
 
+12. # Highlighting Detected Faces
+* Apply the Haar cascade face detection code to identify and highlight multiple faces in family or crowd photos.
   ```python
   import face_recognition
   import numpy as np
@@ -320,6 +345,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/1a8af874-394e-4039-98d2-8823f374e88e)
 
+13. # Extracting Contours for Shape Analysis
+* Use contour detection to analyze and outline geometric shapes in hand-drawn images.
   ```python
   import cv2
   from google.colab.patches import cv2_imshow
@@ -377,6 +404,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/e0bd35f4-17c1-464b-b6c7-4fd583ff7276)
 
+14. # Applying Image Blurring Techniques
+* Demonstrate various image blurring methods (Gaussian blur, median blur) to soften details in an image.
   ```python
   import cv2
   from google.colab.patches import cv2_imshow
@@ -391,6 +420,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/781476bc-4a57-480f-bdd3-a4d5fc7df885)
 
+15. # Segmenting Images Based on Contours
+* Use contour detection to separate different sections of an image, like dividing a painting into its distinct elements.
   ```python
   import cv2
   from google.colab.patches import cv2_imshow
@@ -434,6 +465,8 @@ Summarize your project's objective, approach, and expected results.
   ```
   ![image](https://github.com/user-attachments/assets/52cd3810-6006-4f3b-b6ff-3b00a6779b9e)
 
+16. # Combining Erosion and Dilation for Feature Refinement
+* Apply erosion followed by dilation on an image to refine and smooth out small features.
   ```python
   import cv2
   from google.colab.patches import cv2_imshow
