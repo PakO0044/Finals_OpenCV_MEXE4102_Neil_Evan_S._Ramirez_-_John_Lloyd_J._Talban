@@ -18,7 +18,7 @@ Summarize your project's objective, approach, and expected results.
 # Conclusion
 * Summarize your findings, challenges, and outcomes.
 # Additional Materials
-* 16 Basic OpenCV projects
+# Part 1: 16 Basic OpenCV projects
 
   ```python
    !git clone https://github.com/PakO0044/Finals_OpenCV_MEXE4102_Neil_Evan_S._Ramirez_-_John_Lloyd_J._Talban.git
