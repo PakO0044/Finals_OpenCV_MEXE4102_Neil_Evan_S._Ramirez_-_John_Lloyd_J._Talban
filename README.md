@@ -350,7 +350,8 @@ for (top,right, bottom, left), face_encoding in zip(face_locations, face_encodin
 cv2_imshow(unknown_image_to_draw)
 
   ```
-  ![image](https://github.com/user-attachments/assets/1a8af874-394e-4039-98d2-8823f374e88e)
+![image](https://github.com/user-attachments/assets/bd377eaa-43e1-44fb-9f2a-3b3af4e1ba47)
+
 
 13. # Extracting Contours for Shape Analysis
 * Use contour detection to analyze and outline geometric shapes in hand-drawn images.
