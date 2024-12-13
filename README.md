@@ -161,7 +161,6 @@ The project's primary focus is on creating intricate tessellation patterns using
 * Functions for drawing, overlaying shapes, and adjusting transparency
 * Essential functions are included for drawing shapes, overlaying them on the canvas with transparency adjustments, and ensuring seamless integration within the tessellation.
 
-
 # Additional Materials
 # Part 1: 16 Basic OpenCV projects
 
@@ -434,7 +433,8 @@ The project's primary focus is on creating intricate tessellation patterns using
 
   cap.release()
   ```
-  ![image](https://github.com/user-attachments/assets/8d6f0b6d-5390-4d43-9dbd-4fe17e6d4526)
+![image](https://github.com/user-attachments/assets/83b2ec25-9676-4e89-8842-c1db6874b3f7)
+
 
 12. # Highlighting Detected Faces
 * Apply the Haar cascade face detection code to identify and highlight multiple faces in family or crowd photos.
