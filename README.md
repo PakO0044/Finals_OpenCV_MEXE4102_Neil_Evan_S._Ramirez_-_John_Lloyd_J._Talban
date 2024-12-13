@@ -17,7 +17,7 @@
 6. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
 7. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
 <div align="justify">
-
+8. [References](#references)
 # **Introduction**
 
 ## Tessellation
@@ -1109,6 +1109,13 @@ for row in range(0, canvas_height, spacing):
 cv2_imshow(img)
 ```
 ![image](https://github.com/user-attachments/assets/cf1190ad-6dc1-4913-849f-eca51d7e56a6)
+
+# References
+- https://www.kaggle.com/datasets/singhnavjot2062001/geometric-shapes-circle-square-triangle
+- https://mathworld.wolfram.com/RegularTessellation.html
+- https://mathworld.wolfram.com/EquilateralTriangle.html
+- https://mathworld.wolfram.com/Square.html
+- https://youtu.be/E3Lg4aZVCAU?si=_UT8JlruRT_q7wi1
 
 
 
