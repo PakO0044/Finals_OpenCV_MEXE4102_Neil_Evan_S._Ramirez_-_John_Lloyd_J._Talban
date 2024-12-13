@@ -6,7 +6,7 @@
 4. [Conclusion](#conclusion)
 5. [Part 1: 16 Basic OpenCV projects](#part-1-16-basic-opencv-projects)
 6. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
-7. [Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
+7. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
 # **Introduction**
 ## Shapes That Fit: Geometric Foundations of Tessellation
 * **Understanding Tessellation in Computer Vision:** Tessellation involves tiling a plane with one or more geometric shapes without overlaps or gaps. In computer vision, this problem extends to identifying, analyzing, and generating patterns in images or data.
@@ -22,8 +22,129 @@
 # Abstract
 Summarize your project's objective, approach, and expected results.
 # Project Methods
-* Provide a step-by-step explanation of your methodology in bulleted form.
-* Avoid paragraphs; focus on clarity and conciseness.
+## Shapes That Fit: Geometric Foundations of Tessellation
+
+#### **Import Libraries**
+- **Libraries**:
+  - `cv2`: For image processing.
+  - `numpy`: For array manipulation.
+  - `google.colab.patches.cv2_imshow`: To display images in Google Colab.
+
+---
+
+#### **Load Images**
+- Use `cv2.imread()` to load the images for the triangle, circle, and square.
+- Ensure the images are loaded with transparency support (`IMREAD_UNCHANGED`).
+
+---
+
+#### **Remove Background**
+- Define a `remove_background()` function to make the background of each image transparent:
+  - **Input Check**: Raise an error if the image fails to load.
+  - **Alpha Channel Check**: If the image already has an alpha channel, return it as is.
+  - **Add Alpha Channel**:
+    - Split the image into blue, green, and red channels.
+    - Create a new alpha channel initialized to fully opaque (`255`).
+    - Define a white color range to identify the background.
+    - Set the alpha channel to `0` (transparent) for pixels within the background color range.
+  - Merge the color channels with the new alpha channel and return the image.
+
+---
+
+#### **Resize Images**
+- Resize all shapes (triangle, circle, square) to a uniform size (`30x30 pixels`) using `cv2.resize()` to maintain consistency in tessellation.
+
+---
+
+#### **Create a Canvas**
+- Initialize a blank canvas (`800x600 pixels`) with a white background using `np.ones()`.
+
+---
+
+#### **Define Image Overlay Function**
+- Define `overlay_image()` to blend shapes onto the canvas:
+  - Check if the overlay image has an alpha channel.
+  - Blend the shape onto the canvas using the alpha channel for transparency.
+  - If no alpha channel exists, directly overlay the image onto the canvas.
+
+---
+
+#### **Define Tessellation Parameters**
+- Calculate the number of rows and columns:
+  - `rows = canvas height // shape size`.
+  - `cols = canvas width // shape size`.
+
+---
+
+#### **Create Tessellation Pattern**
+- Use nested loops to iterate through rows and columns:
+  - Compute the `(i + j) % 3` value to alternate shapes:
+    - `0`: Place a triangle.
+    - `1`: Place a circle.
+    - `2`: Place a square.
+  - Calculate the top-left position `(x, y)` for each shape and use `overlay_image()` to draw it on the canvas.
+
+---
+
+#### **Display and Save the Output**
+- Use `cv2_imshow()` to display the tessellation in Colab.
+- Optionally save the output image to a file (`tessellation_output.png`) using `cv2.imwrite()`.
+
+---
+## Shapes That Fit: Geometric Foundations of Tessellation without a Dataset
+
+#### **Import Libraries**
+- **`cv2`**: For image manipulation and drawing shapes.
+- **`numpy`**: For numerical operations and handling arrays.
+- **`cv2_imshow`**: To display images in Google Colab.
+
+---
+
+#### **Create a Blank Canvas**
+- Use `np.zeros()` to create a black canvas of size `512x512 pixels` with three color channels (RGB).
+- The canvas serves as the base for the tessellation.
+
+---
+
+#### **Define Tessellation Parameters**
+- **Canvas Dimensions**: Extract `canvas_height` and `canvas_width` from the shape of the canvas.
+- **Shape Size**: Set `shape_size` to define the side length of the square and the diameter of the circle.
+- **Spacing**: Set `spacing` to control the distance between the centers of the shapes.
+
+---
+
+#### **Define Shape Drawing Functions**
+- **Circle**:
+  - Use `cv2.circle()` to draw a filled circle.
+  - Input parameters: `center` (position), `radius` (half of `shape_size`), and `color`.
+- **Square**:
+  - Use `cv2.rectangle()` to draw a filled square.
+  - Calculate the top-left and bottom-right corners based on the center and `shape_size`.
+- **Triangle**:
+  - Use `cv2.fillPoly()` to draw a filled triangle.
+  - Calculate the vertices based on the center and `shape_size`.
+  - Support both upward and downward orientations using the `direction` parameter.
+
+---
+
+#### **Create Tessellation Pattern**
+- Use nested loops to iterate over rows and columns:
+  - **Row and Column Spacing**: Increment by `spacing` to position shapes evenly.
+  - **Center Calculation**: Compute the center coordinates for each shape.
+  - **Shape Selection**:
+    - Use modular arithmetic (`%`) to alternate shapes and colors:
+      - If `(row + col) % (2 * spacing) == 0`: Draw a red square.
+      - If `(row + col) % (3 * spacing) == 0`: Draw a green triangle.
+      - Otherwise, draw a blue circle.
+
+---
+
+#### **Display the Tessellation**
+- Use `cv2_imshow()` to display the tessellated pattern in Colab.
+- The final output shows alternating squares, triangles, and circles in a grid pattern with varying colors.
+
+---
+
 # Conclusion
 * Summarize your findings, challenges, and outcomes.
 # Additional Materials
@@ -817,7 +938,7 @@ cv2.imwrite("tessellation_output.png", canvas)  # Optionally save the output
 ```
 ![image](https://github.com/user-attachments/assets/ded40196-76b8-46f2-addc-1d7ce6fb0be0)
 
-# Shapes That Fit: Geometric Foundations of Tessellation without a Dataset
+# Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset
 ``` python
 import cv2
 import numpy as np
