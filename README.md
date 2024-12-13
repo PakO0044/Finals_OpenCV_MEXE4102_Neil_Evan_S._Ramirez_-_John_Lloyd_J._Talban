@@ -18,7 +18,6 @@
 7. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
 <div align="justify">
 8. [References](#references)
-# **Introduction**
 
 ## Tessellation
 * Tessellation involves tiling a plane with geometric shapes without overlaps or gaps.
