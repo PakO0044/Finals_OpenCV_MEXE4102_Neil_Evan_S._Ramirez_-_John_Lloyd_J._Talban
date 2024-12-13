@@ -16,8 +16,8 @@
 5. [Part 1: 16 Basic OpenCV projects](#part-1-16-basic-opencv-projects)
 6. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
 7. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
-<div align="justify">
 8. [References](#references)
+<div align="justify">
 
 ## Tessellation
 * Tessellation involves tiling a plane with geometric shapes without overlaps or gaps.
