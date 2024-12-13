@@ -8,17 +8,14 @@
 6. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
 7. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
 # **Introduction**
-## Shapes That Fit: Geometric Foundations of Tessellation
-* **Understanding Tessellation in Computer Vision:** Tessellation involves tiling a plane with one or more geometric shapes without overlaps or gaps. In computer vision, this problem extends to identifying, analyzing, and generating patterns in images or data.
-* **Complexity:** Geometric tessellation demands efficient algorithms to detect, classify, and recreate intricate tiling patterns, especially when working with irregular or distorted shapes.
-* **Applications:** Tessellation forms the basis for various tasks, including texture analysis, object recognition, and architectural design in images.
-#### Significance in Computer Vision
-* **Texture Analysis:** Tessellation aids in understanding surface properties, such as roughness or regularity, from images, which is crucial in fields like material science or quality control.
-* **Pattern Recognition:** It supports identifying repeating geometric structures in natural or synthetic environments, which has applications in remote sensing and art restoration.
-* **Image Compression:** Efficient tessellation algorithms help segment images into simpler geometric components, optimizing storage and processing requirements.
+## Tessellation
+* Tessellation involves tiling a plane with geometric shapes without overlaps or gaps.
+#### **Significance in Computer Vision**
+* **Texture Analysis:** It helps in understanding surface properties like roughness or regularity from images, crucial in fields such as material science.
+* **Pattern Recognition:** Tessellation aids in identifying repeating geometric structures in images, applicable in fields like remote sensing and art restoration.
+* **Image Compression:** Efficient tessellation algorithms assist in segmenting images into simpler geometric components, optimizing storage and processing requirements.
 * **3D Reconstruction:** Tessellation techniques contribute to modeling and rendering complex surfaces in virtual environments or augmented reality.
-* **Biological and Urban Mapping:** Analyzing natural patterns (e.g., honeycombs) or man-made layouts (e.g., city grids) often involves tessellation principles.
-
+* **Biological and Urban Mapping:** It involves analyzing natural patterns (e.g., honeycombs) or man-made layouts (e.g., city grids) using tessellation principles.
 # Abstract
 The project's primary focus is on creating intricate tessellation patterns using geometric shapes, aiming to address challenges in achieving desired aesthetic allure within the designs through a systematic approach. By meticulously integrating geometric shapes, the project seeks to generate visually captivating and harmonious tessellation designs as its core objective. Additionally, the project incorporates advanced features that significantly enhance its capabilities, including precise drawing mechanisms for overlaying shapes onto the canvas and the ability to adjust transparency levels, adding depth and sophistication to the overall visual impact of the tessellations. This abstract offers a comprehensive overview of the project's methods and expected outcomes, shedding light on the detailed process involved in crafting mesmerizing tessellation patterns that are both visually appealing and artistically compelling, showcasing the project's dedication to creating intricate and visually striking geometric compositions.
 
