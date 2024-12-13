@@ -273,16 +273,22 @@ The project's primary focus is on creating intricate tessellation patterns using
 
 7. Adding Text to Images
 - Use the text overlay code to label images with captions, annotations, or titles.
-  ```python
-   import cv2
-   import numpy as np
-   from google.colab.patches import cv2_imshow
+```python
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
 
-   img = np.zeros((512, 512, 3), np.uint8)
-   #Write a Text
-   cv2.putText(img,"NYAWWWWW",(35,254),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,255),2)
-   ```
-   ![image](https://github.com/user-attachments/assets/0b9fb70c-0401-41f2-bb03-91809b764aeb)
+# Load the image
+image = cv2.imread("Images/kobe.jpg")
+
+# Write a Text
+cv2.putText(image, "NYAWWWWW", (35, 254), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 255), 2)
+
+# Display the image with text
+cv2_imshow(image)
+```
+![image](https://github.com/user-attachments/assets/38dffc2e-c44c-4ff0-a623-f8a659f3a553)
+
 
 8. Isolating Objects by Color
 - Apply the HSV thresholding code to extract and display objects of specific colors from an image.
