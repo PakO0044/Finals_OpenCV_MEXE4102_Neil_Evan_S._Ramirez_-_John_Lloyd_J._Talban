@@ -808,9 +808,192 @@ cv2.imwrite("tessellation_output.png", canvas)  # Optionally save the output
 ```
 ![image](https://github.com/user-attachments/assets/ded40196-76b8-46f2-addc-1d7ce6fb0be0)
 
+# Shapes That Fit: Geometric Foundations of Tessellation without a Dataset
+``` python
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
 
+# Create a blank canvas
+img = np.zeros((512, 512, 3), np.uint8)
 
+# Tessellation parameters
+canvas_height, canvas_width = img.shape[:2]
+shape_size = 50  # Size of each shape (side length for square)
+spacing = 60     # Spacing between shapes
 
+# Function to draw a square
+def draw_square(image, center, size, color):
+    half_size = size // 2
+    top_left = (center[0] - half_size, center[1] - half_size)
+    bottom_right = (center[0] + half_size, center[1] + half_size)
+    cv2.rectangle(image, top_left, bottom_right, color, -1)  # Fill the square with the specified color
+
+# Draw tessellation pattern with alternating color of squares
+for row in range(0, canvas_height, spacing):
+    for col in range(0, canvas_width, spacing):
+        center = (col + shape_size // 2, row + shape_size // 2)
+        if (row + col) % (2 * spacing) == 0:
+            # Draw a red square
+            draw_square(img, center, shape_size, (255, 0, 0))
+        else:
+            # Draw a green square
+            draw_square(img, center, shape_size, (0, 255, 0))
+
+# Display the tessellated pattern with alternating color of squares
+cv2_imshow(img)
+```
+![image](https://github.com/user-attachments/assets/9a699109-f9cc-413d-be74-9b924b94fe6c)
+
+```python
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
+
+# Read the uploaded image
+img = np.zeros((512, 512, 3), np.uint8)
+
+# Tessellation parameters
+canvas_height, canvas_width = img.shape[:2]
+shape_size = 50  # Size of each shape (side length for triangle)
+spacing = 60     # Spacing between shapes
+
+# Function to draw a triangle
+def draw_triangle(image, center, size, color, thickness, direction="up"):
+    half_size = size // 2
+    if direction == "up":
+        pt1 = (center[0], center[1] - half_size)  # Top vertex
+        pt2 = (center[0] - half_size, center[1] + half_size)  # Bottom-left vertex
+        pt3 = (center[0] + half_size, center[1] + half_size)  # Bottom-right vertex
+    else:  # Downward-facing triangle
+        pt1 = (center[0], center[1] + half_size)  # Bottom vertex
+        pt2 = (center[0] - half_size, center[1] - half_size)  # Top-left vertex
+        pt3 = (center[0] + half_size, center[1] - half_size)  # Top-right vertex
+    points = np.array([pt1, pt2, pt3], np.int32)
+    cv2.fillPoly(image, [points], color)
+
+# Draw tessellation pattern with alternating color of triangles
+for row in range(0, canvas_height, spacing):
+    for col in range(0, canvas_width, spacing):
+        center = (col + shape_size // 2, row + shape_size // 2)
+        if (row + col) % (2 * spacing) == 0:
+            # Draw a green triangle
+            draw_triangle(img, center, shape_size, (0, 255, 0), -1)
+        else:
+            # Draw a red triangle
+            draw_triangle(img, center, shape_size, (255, 0, 0), -1, direction="down")
+
+# Display the tessellated pattern with alternating color of triangles
+cv2_imshow(img)
+```
+![image](https://github.com/user-attachments/assets/5c2a87a0-7e52-4cd5-b78c-c3eb88a6a214)
+
+``` python
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
+
+# Create a blank canvas
+img = np.zeros((512, 512, 3), np.uint8)
+
+# Tessellation parameters
+canvas_height, canvas_width = img.shape[:2]
+shape_size = 50  # Size of each shape (side length for square)
+spacing = 60     # Spacing between shapes
+
+# Function to draw a square
+def draw_square(image, center, size, color):
+    half_size = size // 2
+    top_left = (center[0] - half_size, center[1] - half_size)
+    bottom_right = (center[0] + half_size, center[1] + half_size)
+    cv2.rectangle(image, top_left, bottom_right, color, -1)  # Fill the square with the specified color
+
+# Function to draw a triangle
+def draw_triangle(image, center, size, color, direction="up"):
+    half_size = size // 2
+    if direction == "up":
+        pt1 = (center[0], center[1] - half_size)  # Top vertex
+        pt2 = (center[0] - half_size, center[1] + half_size)  # Bottom-left vertex
+        pt3 = (center[0] + half_size, center[1] + half_size)  # Bottom-right vertex
+    else:  # Downward-facing triangle
+        pt1 = (center[0], center[1] + half_size)  # Bottom vertex
+        pt2 = (center[0] - half_size, center[1] - half_size)  # Top-left vertex
+        pt3 = (center[0] + half_size, center[1] - half_size)  # Top-right vertex
+    points = np.array([pt1, pt2, pt3], np.int32)
+    cv2.fillPoly(image, [points], color)
+
+# Draw tessellation pattern with alternating color of squares and triangles
+for row in range(0, canvas_height, spacing):
+    for col in range(0, canvas_width, spacing):
+        center = (col + shape_size // 2, row + shape_size // 2)
+        if (row + col) % (2 * spacing) == 0:
+            # Draw a red square
+            draw_square(img, center, shape_size, (255, 0, 0))
+        else:
+            # Draw a green triangle
+            draw_triangle(img, center, shape_size, (0, 255, 0))
+
+# Display the tessellated pattern with alternating color of squares and triangles
+cv2_imshow(img)
+```
+![image](https://github.com/user-attachments/assets/091de822-052d-461f-a1ce-1042c108bc32)
+
+``` python
+import cv2
+import numpy as np
+from google.colab.patches import cv2_imshow
+
+# Create a blank canvas
+img = np.zeros((512, 512, 3), np.uint8)
+
+# Tessellation parameters
+canvas_height, canvas_width = img.shape[:2]
+shape_size = 50  # Size of each shape (side length for circle)
+spacing = 60     # Spacing between shapes
+
+# Function to draw a circle
+def draw_circle(image, center, radius, color):
+    cv2.circle(image, center, radius, color, -1)
+
+# Function to draw a square
+def draw_square(image, center, size, color):
+    half_size = size // 2
+    top_left = (center[0] - half_size, center[1] - half_size)
+    bottom_right = (center[0] + half_size, center[1] + half_size)
+    cv2.rectangle(image, top_left, bottom_right, color, -1)
+
+# Function to draw a triangle
+def draw_triangle(image, center, size, color, direction="down"):
+    half_size = size // 2
+    if direction == "up":
+        pt1 = (center[0], center[1] - half_size)  # Top vertex
+        pt2 = (center[0] - half_size, center[1] + half_size)  # Bottom-left vertex
+        pt3 = (center[0] + half_size, center[1] + half_size)  # Bottom-right vertex
+    else:  # Downward-facing triangle
+        pt1 = (center[0], center[1] + half_size)  # Bottom vertex
+        pt2 = (center[0] - half_size, center[1] - half_size)  # Top-left vertex
+        pt3 = (center[0] + half_size, center[1] - half_size)  # Top-right vertex
+    points = np.array([pt1, pt2, pt3], np.int32)
+    cv2.fillPoly(image, [points], color)
+
+# Draw tessellation pattern with alternating color of shapes
+for row in range(0, canvas_height, spacing):
+    for col in range(0, canvas_width, spacing):
+        center = (col + shape_size // 2, row + shape_size // 2)
+        if (row + col) % (2 * spacing) == 0:
+            # Draw a red square
+            draw_square(img, center, shape_size, (255, 0, 0))
+        elif (row + col) % (3 * spacing) == 0:
+            # Draw a green triangle
+            draw_triangle(img, center, shape_size, (0, 255, 0))
+        else:
+            # Draw a blue circle
+            draw_circle(img, center, shape_size // 2, (0, 0, 255))
+
+# Display the tessellated pattern with alternating shapes
+cv2_imshow(img)
+```
+![image](https://github.com/user-attachments/assets/cf1190ad-6dc1-4913-849f-eca51d7e56a6)
 
 
 
