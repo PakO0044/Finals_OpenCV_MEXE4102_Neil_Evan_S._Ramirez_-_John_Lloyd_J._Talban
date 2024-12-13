@@ -16,16 +16,22 @@
 5. [Part 1: 16 Basic OpenCV projects](#part-1-16-basic-opencv-projects)
 6. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
 7. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
+<div align="justify">
+
 # **Introduction**
-## Shapes That Fit: Geometric Foundations of Tessellation
+
+## Tessellation
 * Tessellation involves tiling a plane with geometric shapes without overlaps or gaps.
+
 #### **Significance in Computer Vision**
 * **Texture Analysis:** It helps in understanding surface properties like roughness or regularity from images, crucial in fields such as material science.
 * **Pattern Recognition:** Tessellation aids in identifying repeating geometric structures in images, applicable in fields like remote sensing and art restoration.
 * **Image Compression:** Efficient tessellation algorithms assist in segmenting images into simpler geometric components, optimizing storage and processing requirements.
 * **3D Reconstruction:** Tessellation techniques contribute to modeling and rendering complex surfaces in virtual environments or augmented reality.
 * **Biological and Urban Mapping:** It involves analyzing natural patterns (e.g., honeycombs) or man-made layouts (e.g., city grids) using tessellation principles.
+
 # Abstract
+
 The project's primary focus is on creating intricate tessellation patterns using geometric shapes, aiming to address challenges in achieving desired aesthetic allure within the designs through a systematic approach. By meticulously integrating geometric shapes, the project seeks to generate visually captivating and harmonious tessellation designs as its core objective. Additionally, the project incorporates advanced features that significantly enhance its capabilities, including precise drawing mechanisms for overlaying shapes onto the canvas and the ability to adjust transparency levels, adding depth and sophistication to the overall visual impact of the tessellations. This abstract offers a comprehensive overview of the project's methods and expected outcomes, shedding light on the detailed process involved in crafting mesmerizing tessellation patterns that are both visually appealing and artistically compelling, showcasing the project's dedication to creating intricate and visually striking geometric compositions.
 
 # Project Methods
@@ -97,74 +103,27 @@ The project's primary focus is on creating intricate tessellation patterns using
 - Optionally save the output image to a file (`tessellation_output.png`) using `cv2.imwrite()`.
 
 ---
-## Shapes That Fit: Geometric Foundations of Tessellation without a Dataset
-
-#### **Import Libraries**
-- **`cv2`**: For image manipulation and drawing shapes.
-- **`numpy`**: For numerical operations and handling arrays.
-- **`cv2_imshow`**: To display images in Google Colab.
-
----
-
-#### **Create a Blank Canvas**
-- Use `np.zeros()` to create a black canvas of size `512x512 pixels` with three color channels (RGB).
-- The canvas serves as the base for the tessellation.
-
----
-
-#### **Define Tessellation Parameters**
-- **Canvas Dimensions**: Extract `canvas_height` and `canvas_width` from the shape of the canvas.
-- **Shape Size**: Set `shape_size` to define the side length of the square and the diameter of the circle.
-- **Spacing**: Set `spacing` to control the distance between the centers of the shapes.
-
----
-
-#### **Define Shape Drawing Functions**
-- **Circle**:
-  - Use `cv2.circle()` to draw a filled circle.
-  - Input parameters: `center` (position), `radius` (half of `shape_size`), and `color`.
-- **Square**:
-  - Use `cv2.rectangle()` to draw a filled square.
-  - Calculate the top-left and bottom-right corners based on the center and `shape_size`.
-- **Triangle**:
-  - Use `cv2.fillPoly()` to draw a filled triangle.
-  - Calculate the vertices based on the center and `shape_size`.
-  - Support both upward and downward orientations using the `direction` parameter.
-
----
-
-#### **Create Tessellation Pattern**
-- Use nested loops to iterate over rows and columns:
-  - **Row and Column Spacing**: Increment by `spacing` to position shapes evenly.
-  - **Center Calculation**: Compute the center coordinates for each shape.
-  - **Shape Selection**:
-    - Use modular arithmetic (`%`) to alternate shapes and colors:
-      - If `(row + col) % (2 * spacing) == 0`: Draw a red square.
-      - If `(row + col) % (3 * spacing) == 0`: Draw a green triangle.
-      - Otherwise, draw a blue circle.
-
----
-
-#### **Display the Tessellation**
-- Use `cv2_imshow()` to display the tessellated pattern in Colab.
-- The final output shows alternating squares, triangles, and circles in a grid pattern with varying colors.
-
----
 
 # Conclusion
 
 #### **Findings:** 
-* Creation of tessellation patterns with triangles, circles, and squares
+* Creation of tessellation patterns with triangles, circles, and squares.
 * The code successfully integrates different geometric shapes to form a tessellation pattern on the canvas.
+
 #### **Challenges:**
-* Difficulty in achieving desired aesthetic appearance
+* Difficulty in achieving desired aesthetic appearance.
 * Balancing symmetry and color coordination within the tessellation posed a significant challenge.
+
 #### **Outcomes:** 
-* Successful generation of tessellation patterns with alternating shapes and colors
+* Successful generation of tessellation patterns with alternating shapes and colors.
 * The code effectively produces visually appealing tessellation patterns with a harmonious blend of shapes and colors.
+
 #### **Additional Features:**
-* Functions for drawing, overlaying shapes, and adjusting transparency
+* Functions for drawing, overlaying shapes, and adjusting transparency.
 * Essential functions are included for drawing shapes, overlaying them on the canvas with transparency adjustments, and ensuring seamless integration within the tessellation.
+
+</div>
+
 
 # Additional Materials
 # Part 1: 16 Basic OpenCV projects
