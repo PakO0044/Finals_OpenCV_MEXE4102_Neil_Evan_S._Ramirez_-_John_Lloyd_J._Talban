@@ -20,7 +20,8 @@
 * **Biological and Urban Mapping:** Analyzing natural patterns (e.g., honeycombs) or man-made layouts (e.g., city grids) often involves tessellation principles.
 
 # Abstract
-Summarize your project's objective, approach, and expected results.
+The project's primary focus is on creating intricate tessellation patterns using geometric shapes, aiming to address challenges in achieving desired aesthetic allure within the designs through a systematic approach. By meticulously integrating geometric shapes, the project seeks to generate visually captivating and harmonious tessellation designs as its core objective. Additionally, the project incorporates advanced features that significantly enhance its capabilities, including precise drawing mechanisms for overlaying shapes onto the canvas and the ability to adjust transparency levels, adding depth and sophistication to the overall visual impact of the tessellations. This abstract offers a comprehensive overview of the project's methods and expected outcomes, shedding light on the detailed process involved in crafting mesmerizing tessellation patterns that are both visually appealing and artistically compelling, showcasing the project's dedication to creating intricate and visually striking geometric compositions.
+
 # Project Methods
 ## Shapes That Fit: Geometric Foundations of Tessellation
 
@@ -146,7 +147,21 @@ Summarize your project's objective, approach, and expected results.
 ---
 
 # Conclusion
-* Summarize your findings, challenges, and outcomes.
+
+#### **Findings:** 
+* Creation of tessellation patterns with triangles, circles, and squares
+* The code successfully integrates different geometric shapes to form a tessellation pattern on the canvas.
+#### **Challenges:**
+* Difficulty in achieving desired aesthetic appearance
+* Balancing symmetry and color coordination within the tessellation posed a significant challenge.
+#### **Outcomes:** 
+* Successful generation of tessellation patterns with alternating shapes and colors
+* The code effectively produces visually appealing tessellation patterns with a harmonious blend of shapes and colors.
+#### **Additional Features:**
+* Functions for drawing, overlaying shapes, and adjusting transparency
+* Essential functions are included for drawing shapes, overlaying them on the canvas with transparency adjustments, and ensuring seamless integration within the tessellation.
+
+
 # Additional Materials
 # Part 1: 16 Basic OpenCV projects
 
