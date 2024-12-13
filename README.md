@@ -1,12 +1,12 @@
 # Table of Contents
 
- [Introduction](#introduction)
- [Abstract](#abstract)
- [Project Methods](#project-methods)
- [Conclusion](#conclusion)
- [Part 1: 16 Basic OpenCV projects](#part-1-16-basic-opencv-projects)
- [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
- [Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
+1. [Introduction](#introduction)
+2. [Abstract](#abstract)
+3. [Project Methods](#project-methods)
+4. [Conclusion](#conclusion)
+5. [Part 1: 16 Basic OpenCV projects](#part-1-16-basic-opencv-projects)
+6. [Part 2: Shapes That Fit: Geometric Foundations of Tessellation](#part-2-shapes-that-fit-geometric-foundations-of-tessellation)
+7. [Shapes That Fit: Geometric Foundations of Tessellation without a Dataset](#shapes-that-fit-geometric-foundations-of-tessellation-without-a-dataset)
 # **Introduction**
 ## Shapes That Fit: Geometric Foundations of Tessellation
 * **Understanding Tessellation in Computer Vision:** Tessellation involves tiling a plane with one or more geometric shapes without overlaps or gaps. In computer vision, this problem extends to identifying, analyzing, and generating patterns in images or data.
