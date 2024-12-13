@@ -1,3 +1,12 @@
+<div align="center">
+
+# **Shapes That Fit: Geometric Foundations of Tessellation**
+## **Final Project: Open CV**
+### MEXE 402 - MEXE 4102
+
+</div>
+
+
 # Table of Contents
 
 1. [Introduction](#introduction)
@@ -20,7 +29,6 @@
 The project's primary focus is on creating intricate tessellation patterns using geometric shapes, aiming to address challenges in achieving desired aesthetic allure within the designs through a systematic approach. By meticulously integrating geometric shapes, the project seeks to generate visually captivating and harmonious tessellation designs as its core objective. Additionally, the project incorporates advanced features that significantly enhance its capabilities, including precise drawing mechanisms for overlaying shapes onto the canvas and the ability to adjust transparency levels, adding depth and sophistication to the overall visual impact of the tessellations. This abstract offers a comprehensive overview of the project's methods and expected outcomes, shedding light on the detailed process involved in crafting mesmerizing tessellation patterns that are both visually appealing and artistically compelling, showcasing the project's dedication to creating intricate and visually striking geometric compositions.
 
 # Project Methods
-## Shapes That Fit: Geometric Foundations of Tessellation
 
 #### **Import Libraries**
 - **Libraries**:
